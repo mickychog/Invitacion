@@ -194,7 +194,7 @@
     });
 
 
-    // JavaScript for video slider navigation
+// JavaScript for video slider navigation
 const btns = document.querySelectorAll(".nav-btn");
 const slides = document.querySelectorAll(".video-slide");
 const contents = document.querySelectorAll(".content");
@@ -256,12 +256,19 @@ function handleTouchEnd() {
   }
 }
 
-// Add touch event listeners to the slider container
+// Add touch event listeners to the slider container and home container
 const sliderContainer = document.querySelector(".slider-navigation");
+const homeContainer = document.querySelector(".home");
 
-sliderContainer.addEventListener("touchstart", handleTouchStart);
-sliderContainer.addEventListener("touchmove", handleTouchMove);
-sliderContainer.addEventListener("touchend", handleTouchEnd);
+const addTouchListeners = (element) => {
+  element.addEventListener("touchstart", handleTouchStart);
+  element.addEventListener("touchmove", handleTouchMove);
+  element.addEventListener("touchend", handleTouchEnd);
+};
+
+addTouchListeners(sliderContainer);
+addTouchListeners(homeContainer);
+
 
   </script>
   <!-- JavaScript Bundle with Popper -->
