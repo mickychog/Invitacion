@@ -83,8 +83,8 @@ section{
   padding: 100px 200px;
 }
 button {
-  background-color: #3498db;
-  border: none;
+  background-color:#4cb5aeff  ;
+  border: rgb(255, 255, 255) solid;
   color: white;
   padding: 10px 20px;
   text-align: center;
@@ -98,7 +98,7 @@ button {
 }
 
 button:hover {
-  background-color: #2980b9;
+  background-color: rgba(24, 125, 120, 0.775);
 }
 
 .home{
@@ -316,7 +316,12 @@ button:hover {
   font-size: 1.1em;
   font-weight: 500;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 40px;
+}
+.btn-asistencia:hover {
+  background-color: rgba(24, 125, 120, 0.775);
+  color: white !important;
+  border:white solid 1px;
 }
 
 .card{
