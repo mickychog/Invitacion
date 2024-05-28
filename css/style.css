@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&display=swap');
+
+:root{
+  /* CSS HEX */
+  --white: #fdfdfdff;
+  --whiteOpacity: rgba(253, 253, 253, 0.164);
+  --verde: #4cb5aeff;
+  --rosa: rgb(165, 255, 228);
+  --durazno: rgb(192, 255, 224);
+}
+
+*{
+  margin: 10;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+address{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+header{
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 200px;
+  transition: 0.5s ease;
+}
+
+header .brand{
+  color: var(--rosa);
+  font-size: 1.5em;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header .navigation{
+  position: relative;
+}
+
+header .navigation .navigation-items a{
+  position: relative;
+  color: var(--durazno);
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 30px;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before{
+  content: '';
+  position: absolute;
+  background: var(--durazno);
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:hover:before{
+  width: 100%;
+}
+
+h2{
+  text-align: center;
+}
+
+section{
+  padding: 100px 200px;
+}
+button {
+  background-color: #3498db;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px !important;
+  cursor: pointer;
+  border-radius: 40px !important;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.home{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: var(--durazno);
+}
+
+.home:before{
+  z-index: 777;
+  content: '';
+  position: absolute;
+  background: var(--whiteOpacity);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.home .content{
+  z-index: 888;
+  color: #fff;
+  width: 70%;
+  margin-top: 0px;
+  display: none;
+}
+
+.home .content.active{
+  display: block;
+
+}
+
+.home .content h1{
+  font-size: 2em;
+  font-weight: 900;
+  letter-spacing: 5px;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+
+.home .content h1 span{
+  font-family: 'Dancing Script', cursive;
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.home .content p{
+  margin-bottom: 65px;
+}
+
+.home .content a{
+  background: #fff;
+  padding: 15px 35px;
+  color: var(--verde);
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.home .media-icons{
+  z-index: 888;
+  position: absolute;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s ease;
+}
+
+.home .media-icons a{
+  color: #fff;
+  font-size: 1.6em;
+  transition: 0.3s ease;
+}
+
+.home .media-icons a:not(:last-child){
+  margin-bottom: 20px;
+}
+
+.home .media-icons a:hover{
+  transform: scale(1.3);
+}
+
+.home video{
+  z-index: 000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider-navigation{
+  z-index: 888;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(80px);
+  margin-bottom: 12px;
+}
+
+.slider-navigation .nav-btn{
+  width: 12px;
+  height: 12px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.5);
+  transition: 0.3s ease;
+}
+
+.slider-navigation .nav-btn.active{
+  background: var(--rosa);
+}
+
+.slider-navigation .nav-btn:not(:last-child){
+  margin-right: 20px;
+}
+
+.slider-navigation .nav-btn:hover{
+  transform: scale(1.2);
+}
+
+.video-slide{
+  position: absolute;
+  width: 100%;
+  clip-path: circle(0% at 0 50%);
+}
+
+.video-slide.active{
+  clip-path: circle(150% at 0 50%);
+  transition: 2s ease;
+  transition-property: clip-path;
+}
+
+.galeria{
+  background: url(../images/bg.jpg) ;
+  background-size: cover;
+}
+
+.cuando-donde{
+  background: url(../images/bg2.jpg)no-repeat;
+  background-size: cover;
+}
+
+.family{
+  background-color: rgba(255, 255, 255, 0.644);
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.half{
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.half p{
+  text-align: center;
+}
+
+.separador{
+  border-radius: 5px;
+  background: var(--rosa);
+  width: 3px;
+  height: 100px;
+  margin: auto 15px;
+}
+
+.carousel{
+  margin: 30px auto;
+  width: 20%;
+}
+
+.bg-color{
+  color: var(--white);
+  padding: 50px;
+  border-radius: 10px;
+  background-color: rgba(76, 181, 174, 0.775);
+}
+
+.bg-color a{
+  text-decoration: none;
+  color: var(--white);
+}
+
+.asistencia{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.asistencia p{
+  text-align: center;
+}
+
+.btn-asistencia{
+  margin-top: 30px;
+  background: #fff;
+  padding: 15px 35px;
+  color: var(--verde) !important;
+  font-size: 1.1em;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.card{
+  margin-top: 40px;
+}
+
+.btn-primary{
+  background: var(--rosa) !important;
+  border-style: none !important;
+}
+
+.simply-section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--durazno);
+  width: 100px;
+  height: 100px;
+  margin: 0 20px;
+  border-radius: 5px;
+}
+
+.simply-amount{
+  text-align: center;
+  display: block;
+}
+
+.vestimenta{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vestimenta img{
+  width: 50%;
+}
+
+.frase{
+  background: var(--durazno);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.frase p{
+  font-size: 2rem;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+}
+
+.develop{
+  font-size: x-small;
+  background-color: #222;
+  text-align: center;
+  padding: 5px;
+}
+
+.develop a{
+  cursor: pointer;
+  text-decoration: none;
+  color: #00fdfd;
+  text-shadow: 3px 3px 5px #a589e7;
+}
+.develop a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+
+#map{
+  width: 80%;
+  height: 450px;
+}
+
+#cuenta{
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  width: 100%;
+}
+
+@media (max-width: 1040px){
+  header{
+    padding: 12px 20px;
+  }
+
+  section{
+    padding: 100px 20px;
+  }
+
+  .home .media-icons{
+    right: 15px;
+  }
+
+  header .navigation{
+    display: none;
+  }
+
+  header .navigation.active{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(1, 1, 1, 0.5);
+  }
+
+  header .navigation .navigation-items a{
+    color: #222;
+    font-size: 1.2em;
+    margin: 20px;
+  }
+
+  header .navigation .navigation-items a:before{
+    background: #222;
+    height: 5px;
+  }
+
+  header .navigation.active .navigation-items{
+    background: #fff;
+    width: 600px;
+    max-width: 600px;
+    margin: 20px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+
+  .menu-btn{
+    background: url(../images/menu.png)no-repeat;
+    background-size: 30px;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+
+  .menu-btn.active{
+    z-index: 999;
+    background: url(../images/close.png)no-repeat;
+    background-size: 25px;
+    background-position: center;
+    transition: 0.3s ease;
+  }
+
+  .carousel{
+    margin: 30px auto;
+    width: 60%;
+  }
+
+  .cuando-donde{
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px){
+  .home .content h1{
+    font-size: 3em;
+    line-height: 60px;
+  }
+
+  .carousel{
+    margin: 20px auto;
+    width: 80%;
+  }
+
+  .cuando-donde{
+    width: 100%;
+  }
+
+  .simply-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--durazno);
+    width: 100px;
+    height: 100px;
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+  
+}
