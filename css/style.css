@@ -423,9 +423,7 @@ button:hover {
     left: 0;
     width: 100%;
     background-color: rgba(6, 6, 6, 0.738);
-    /* Cambia el color de fondo según lo necesites */
     z-index: 1000;
-    /* Asegura que el encabezado esté por encima de otros elementos */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 

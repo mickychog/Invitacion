@@ -40,9 +40,9 @@
     <video class="video-slide" src="videos/video1.mp4" autoplay muted loop></video>
     <video class="video-slide" src="videos/video3.mp4" autoplay muted loop></video>
     <div class="content active">
-      <h1>¡LO LOGRÉ!<br><span>Mi Colación Marcela Neydi</span></h1>
+      <h1><span>Mi Colación Marcela Neydi</span></h1>
       <p>Es un día para celebrar y nos encantaría que nos acompañes. Te esperamos el próximo 14 de Junio de 2024 a las
-        18:00 hrs en el salon de eventos "Las Rosas, Av Emilio Mendizabal Nro. 818, Sucre".
+        18:00 hrs en el salon de eventos "Las Rosas".
         <br>¡No puedes faltar! ➡️
       </p>
 
@@ -269,6 +269,22 @@
         navigation.classList.remove("active");
       }
     });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const playContainer = document.querySelector('.play-container');
+  const playContainerimg = document.querySelector('.play-container img');
+  if (playContainer) {
+    playContainer.style.position = 'fixed';
+    playContainer.style.bottom = '0px';
+    playContainer.style.left = '0px';
+  }
+  if(playContainerimg){
+    playContainerimg.style.width = '90px';
+    playContainerimg.style.height = '90px';
+    
+  }
+});
   </script>
 </body>
 
